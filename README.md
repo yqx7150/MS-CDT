@@ -27,3 +27,19 @@ Results of separating and reconstructing the transverse images of dual tracers o
 ## Results of separating and reconstructing the transverse images of dual tracers of patient II
 ![](https://github.com/yqx7150/MS-CDT/blob/main/MS-CDT_data/figs/Results%20of%20separating%20and%20reconstructing%20the%20transverse%20images%20of%20dual%20tracers%20of%20patient%20II.png)
 Results of separating and reconstructing the transverse images of dual tracers of patient II, namely  and  tracers, using different methods are presented. Comparisons are made among (a) the dual tracers, (b) the original PET of the tracers, (c) iVAN, (d) the DL-based method, (e) MPRnet, (f) pix2pix, (g) DTM, and (h) the images separated by MS-CDT. The detailed magnified images are described in the upper right transverse of the first row. The second row shows the residuals between the reference images and the reconstructed images.
+    
+## Other Related Projects
+* ALL-PET: A Low-resource and Low-shot PET Foundation Model in Projection Domain  [<font size=5>**[Paper]**</font>](https://github.com/yqx7150/RAYSOLUTION_PETdata/blob/main/Paper/ALL_PET_Finalx.pdf)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/ALL-PET)
+
+* Diffusion Transformer Model with Compact Prior for Low-dose PET Reconstruction [<font size=5>**[Paper]**</font>](https://arxiv.org/abs/2407.00944)     [<font size=5>**[Code]**</font>](https://github.com/yqx7150/dtm)
+    
+* RED: Residual Estimation Diffusion for Low-Dose PET Sinogram Reconstruction     
+[<font size=5>**[Paper]**</font>](https://www.sciencedirect.com/science/article/pii/S1361841525001057)       [<font size=5>**[Code]**</font>](https://github.com/yqx7150/RED)  
+
+* Synthetic CT Generation via Variant Invertible Network for Brain PET Attenuation Correction [<font size=5>**[Paper]**</font>](https://ieeexplore.ieee.org/document/10666843) [<font size=5>**[Code]**</font>](https://github.com/yqx7150/PET_AC_sCT)
+
+* Raysolution_PET_Data [<font size=5>**[Data]**</font>](https://github.com/yqx7150/Raysolution_PET_Data)   
+
+* Spatial-Temporal Guided Diffusion Transformer Probabilistic Model for Delayed Scan PET Image Prediction [<font size=5>**[Paper]**</font>](https://ieeexplore.ieee.org/abstract/document/10980366)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/st-DTPM)    
+
+* Double-Constraint Diffusion Model with Nuclear Regularization for Ultra-low-dose PET Reconstruction  [<font size=5>**[Paper]**</font>](https://arxiv.org/pdf/2509.00395)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/DCDM)
