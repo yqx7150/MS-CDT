@@ -1,0 +1,83 @@
+# general settings
+name: test_MSCDTS2
+model_type: MSCDTS2Model
+scale: 4
+num_gpu: auto  # auto: can infer from your visible devices automatically. official: 4 GPUs
+manual_seed: 0
+
+
+# dataset and data loader settings
+datasets:
+  # Uncomment these for validation
+  val_1:
+    name: GoPro
+    type: DeblurPairedDataset
+    dataroot_gt: /home/b109/XFH/MSCDT-master/MSCDT_1/dataset/test
+    dataroot_lq: /home/b109/XFH/MSCDT-master/MSCDT_1/dataset/test/fuse
+    io_backend:
+      type: disk
+
+  val_2:
+    name: HIDE
+    type: DeblurPairedDataset
+    dataroot_gt: /home/b109/XFH/MSCDT-master/MSCDT_1/dataset/test
+    dataroot_lq: /home/b109/XFH/MSCDT-master/MSCDT_1/dataset/test/fuse
+    io_backend:
+      type: disk
+
+
+# network structures
+network_g:
+  type: MSCDTS2
+  n_encoder_res: 5
+  inp_channels: 3
+  out_channels: 3
+  dim: 48
+  num_blocks: [3,5,6,6]
+  num_refinement_blocks: 4
+  heads: [1,2,4,8]
+  ffn_expansion_factor: 2
+  bias: False
+  LayerNorm_type: WithBias
+  n_denoise_res: 1
+  linear_start: 0.1
+  linear_end: 0.99
+  timesteps: 4    
+
+# network structures
+network_S1:
+  type: MSCDTS1
+  n_encoder_res: 5
+  inp_channels: 3
+  out_channels: 3
+  dim: 48
+  num_blocks: [3,5,6,6]
+  num_refinement_blocks: 4
+  heads: [1,2,4,8]
+  ffn_expansion_factor: 2
+  bias: False
+  LayerNorm_type: WithBias
+
+# path
+path:
+  # use the pre-trained Real-ESRNet model
+  pretrain_network_g: /home/b109/XFH/MSCDT-master/MSCDT-LBP/experiments/train_MSCDTS2/models/net_g_10000.pth  
+  pretrain_network_S1: /home/b109/XFH/MSCDT-master/MSCDT-LBP/experiments/train_MSCDTS1_1/models/net_g_10000.pth 
+  param_key_g: params_ema
+  strict_load_g: False
+  ignore_resume_networks: network_S1
+
+
+
+val:
+  save_img: True
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: False
+
+
+
