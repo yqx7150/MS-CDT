@@ -1,0 +1,7 @@
+ hyper = 26
+              sum_diff = x - x0
+              norm_diff = x - n
+              x_new = z0 - ( norm_diff + 3 * hyper * sum_diff) / (3 * hyper + 1)
+              z0 = x_new + 0.5 * (x_new - x)
+              x = x_new  # output
+              x0 = x
