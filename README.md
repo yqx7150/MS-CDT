@@ -6,11 +6,14 @@ In clinical practice, single-radiotracer positron emission tomography (PET) is c
 
 ## MS-CDT network architecture
 ![](https://github.com/yqx7150/MS-CDT/blob/main/MS-CDT_data/figs/MS-CDT%20network%20architecture.png)
+
 Pipeline of the MS-CDT network architecture. MS-CDT is mainly composed of a TMCB, an LPEB, a diffusion stage, and a transformer stage. The tracer PET obtains texture features through the TMCB. The dual-tracer PET and the two single-tracer PETs are respectively combined into an MSP. The texture conditions and the MSP enter the diffusion stage, the texture conditions and the MSP guide the transformer stage to utilize the predicted priors for separation.
 
 ## MSP Extraction Block architecture
 ![](https://github.com/yqx7150/MS-CDT/blob/main/MS-CDT_data/figs/MSP%20Extraction%20Block%20architecture.png)
+
 The pipeline of MSP Extraction Block architecture. Conv: Convolutional layer, LRelu: Leaky Rectified Linear Unit, Avg pool: Average Pooling.
+
 ## Results of separating and reconstructing the coronal images of dual tracers of patient I
 ![](https://github.com/yqx7150/MS-CDT/blob/main/MS-CDT_data/figs/Results%20of%20separating%20and%20reconstructing%20the%20coronal%20images%20of%20dual%20tracers%20of%20patient%20I.png)
 
@@ -18,14 +21,17 @@ Results of separating and reconstructing the coronal images of dual tracers of p
 
 ## Results of separating and reconstructing the coronal images of dual tracers of patient II
 ![](https://github.com/yqx7150/MS-CDT/blob/main/MS-CDT_data/figs/Results%20of%20separating%20and%20reconstructing%20the%20coronal%20images%20of%20dual%20tracers%20of%20patient%20II.png)
+
 Results of separating and reconstructing the coronal images of dual tracers of patient II, namely  and  tracers, using different methods are presented. Comparisons are made among (a) the dual tracers, (b) the original PET of the tracers, (c) iVAN, (d) the DL-based method, (e) MPRnet, (f) pix2pix, (g) DTM, and (h) the images separated by MS-CDT. The detailed magnified images are described in the upper right corner of the first row. The second row shows the residuals between the reference images and the reconstructed images.
 
 ## Results of separating and reconstructing the transverse images of dual tracers of patient I
 ![](https://github.com/yqx7150/MS-CDT/blob/main/MS-CDT_data/figs/Results%20of%20separating%20and%20reconstructing%20the%20transverse%20images%20of%20dual%20tracers%20of%20patient%20I.png)
+
 Results of separating and reconstructing the transverse images of dual tracers of patient I, namely  and  tracers, using different methods are presented. Comparisons are made among (a) the dual tracers, (b) the original PET of the tracers, (c) iVAN, (d) the DL-based method, (e) MPRnet, (f) pix2pix, (g) DTM, and (h) the images separated by MS-CDT. The detailed magnified images are described in the upper right transverse of the first row. The second row shows the residuals between the reference images and the reconstructed images.
 
 ## Results of separating and reconstructing the transverse images of dual tracers of patient II
 ![](https://github.com/yqx7150/MS-CDT/blob/main/MS-CDT_data/figs/Results%20of%20separating%20and%20reconstructing%20the%20transverse%20images%20of%20dual%20tracers%20of%20patient%20II.png)
+
 Results of separating and reconstructing the transverse images of dual tracers of patient II, namely  and  tracers, using different methods are presented. Comparisons are made among (a) the dual tracers, (b) the original PET of the tracers, (c) iVAN, (d) the DL-based method, (e) MPRnet, (f) pix2pix, (g) DTM, and (h) the images separated by MS-CDT. The detailed magnified images are described in the upper right transverse of the first row. The second row shows the residuals between the reference images and the reconstructed images.
 
 ## Other Related Projects
