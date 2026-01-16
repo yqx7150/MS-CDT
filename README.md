@@ -13,6 +13,7 @@ Pipeline of the MS-CDT network architecture. MS-CDT is mainly composed of a TMCB
 The pipeline of MSP Extraction Block architecture. Conv: Convolutional layer, LRelu: Leaky Rectified Linear Unit, Avg pool: Average Pooling.
 ## Results of separating and reconstructing the coronal images of dual tracers of patient I
 ![](https://github.com/yqx7150/MS-CDT/blob/main/MS-CDT_data/figs/Results%20of%20separating%20and%20reconstructing%20the%20coronal%20images%20of%20dual%20tracers%20of%20patient%20I.png)
+
 Results of separating and reconstructing the coronal images of dual tracers of patient I, namely  and  tracers, using different methods are presented. Comparisons are made among (a) the dual tracers, (b) the original PET of the tracers, (c) iVAN, (d) the DL-based method, (e) MPRnet, (f) pix2pix, (g) DTM, and (h) the images separated by MS-CDT. The detailed magnified images are described in the upper right corner of the first row. The second row shows the residuals between the reference images and the reconstructed images.
 
 ## Results of separating and reconstructing the coronal images of dual tracers of patient II
